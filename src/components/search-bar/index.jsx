@@ -29,6 +29,14 @@ class SearchBar extends React.Component {
             onChange={(e) => {
               this.setState({ sString: e.target.value });
             }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                this.props.resetData();
+                this.props.resetPageNo();
+                this.props.setSearchString(this.state.sString);
+                this.props.fetchData();
+              }
+            }}
           />
         </div>
         <div className="button-div">

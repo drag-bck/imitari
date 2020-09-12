@@ -12,9 +12,10 @@ class Tab extends React.Component {
           style={{ backgroundImage: `url(${this.props.data.image_url})` }}
         ></div>
         <div className="title" title={this.props.data.title}>
-          {this.props.data.title && this.props.data.title.length > 25
+          {/* {this.props.data.title && this.props.data.title.length > 25
             ? this.props.data.title.substr(0, 25) + "..."
-            : this.props.data.title}
+            : this.props.data.title} */}
+          {this.props.data.title}
         </div>
       </div>
     );
