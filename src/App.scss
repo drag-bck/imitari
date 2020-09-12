@@ -1,0 +1,39 @@
+.app {
+  .search-bar-container {
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #439775;
+  }
+  .tab-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    min-width: 200px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .show-more-container {
+    margin: 0 auto;
+    width: 300px;
+
+    .show-more {
+      width: 300px;
+      background-color: #3772ff;
+      margin: 0 auto;
+      border-radius: 0px;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+  .welcome-text {
+    margin: 0 auto;
+    color: white;
+    padding: 20px 0;
+  }
+}

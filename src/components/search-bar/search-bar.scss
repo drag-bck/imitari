@@ -1,0 +1,32 @@
+.search-bar {
+  display: flex;
+  border: 1px solid white;
+  width: 60%;
+  min-width: 200px;
+  margin: 0 auto;
+  // border-radius: 8px;
+  .input-div {
+    flex-grow: 1;
+    border-right: 1px solid white;
+    padding: 5px 40px;
+    background-color: white;
+    color: black;
+    .input-css {
+      width: 100%;
+    }
+  }
+
+  .button-div {
+    .button-css {
+      width: 100%;
+      min-width: 100px;
+      height: 100%;
+      background-color: #f05d5e;
+      border-radius: 0px;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: none;
+      color: white;
+    }
+  }
+}
