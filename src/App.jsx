@@ -32,16 +32,18 @@ class App extends React.Component {
             <div className="welcome-text">{WELCOME_TEXT}</div>
           )}
         </div>
-        <div className="show-more-container">
-          <Button
-            className="show-more"
-            onClick={() => {
-              this.props.fetchData();
-            }}
-          >
-            {LOAD_MORE}
-          </Button>
-        </div>
+        {!!this.props.data.length > 0 && (
+          <div className="show-more-container">
+            <Button
+              className="show-more"
+              onClick={() => {
+                this.props.fetchData();
+              }}
+            >
+              {LOAD_MORE}
+            </Button>
+          </div>
+        )}
       </div>
     );
   }
