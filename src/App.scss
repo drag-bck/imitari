@@ -1,5 +1,6 @@
 .app {
   .search-bar-container {
+    box-shadow: 0px -1px 10px #f05d5e;
     position: sticky;
     top: 0;
     padding-top: 20px;
@@ -17,6 +18,7 @@
 
   .show-more-container {
     margin: 0 auto;
+    margin-bottom: 100px;
     width: 300px;
 
     .show-more {
