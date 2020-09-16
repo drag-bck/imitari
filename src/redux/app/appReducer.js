@@ -4,12 +4,14 @@ import {
   RESET_PAGE_NO,
   SET_DATA,
   RESET_DATA,
+  SET_URL,
 } from "./actionTypes";
 
 const initialState = {
   searchString: "",
   pageNo: 1,
   data: [],
+  currentUrl: "",
 };
 
 export default (state = initialState, action) => {
@@ -39,6 +41,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         data: [],
+      };
+    case SET_URL:
+      return {
+        ...state,
+        currentUrl: action.url,
       };
     default:
       return state;

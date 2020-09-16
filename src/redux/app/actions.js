@@ -4,6 +4,7 @@ import {
   SET_DATA,
   RESET_DATA,
   RESET_PAGE_NO,
+  SET_URL,
 } from "./actionTypes";
 import Axios from "axios";
 import { API_URL } from "./../../constants";
@@ -43,15 +44,22 @@ export function resetData() {
 
 export function fetchData() {
   return (dispatch, getState) => {
-    Axios.get(
-      `${API_URL}?q=${getState().app.searchString}&limit=16&page=${
-        getState().app.pageNo
-      }`
-    ).then((response) => {
+    const URL = `${API_URL}?q=${getState().app.searchString}&limit=16&page=${
+      getState().app.pageNo
+    }`;
+    dispatch(setUrl(URL));
+    Axios.get(URL).then((response) => {
       if (response.statusText === "OK") {
         dispatch(setData(response.data.results));
         dispatch(setPageNo(getState().app.pageNo + 1));
       }
     });
+  };
+}
+
+export function setUrl(url) {
+  return {
+    type: SET_URL,
+    url,
   };
 }

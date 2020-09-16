@@ -23,6 +23,9 @@ class App extends React.Component {
         <div className="search-bar-container">
           <SearchBar />
         </div>
+        {this.props.currentUrl !== "" && (
+          <div className="current-url">URL: {this.props.currentUrl}</div>
+        )}
         <div className="tab-container">
           {this.props.data.length > 0 ? (
             this.props.data.map((ele) => {
@@ -50,7 +53,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return { data: state.app.data };
+  return { data: state.app.data, currentUrl: state.app.currentUrl };
 };
 
 const mapDispatchToProps = (dispatch) => {
