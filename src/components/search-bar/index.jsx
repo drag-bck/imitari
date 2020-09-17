@@ -29,7 +29,7 @@ class SearchBar extends React.Component {
             onChange={(e) => {
               this.setState({ sString: e.target.value });
             }}
-            onKeyDown={(e) => {
+            onKeyPress={(e) => {
               if (e.key === "Enter") {
                 this.props.resetData();
                 this.props.resetPageNo();
