@@ -2,25 +2,29 @@
   width: 250px;
   min-height: 400px;
   // background-color: aqua;
-  // border-radius: 8px;
+  border-radius: 8px;
   margin-top: 20px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
+  background-color: white;
 
   .image {
     background-size: cover;
     background-repeat: no-repeat;
     width: 250px;
     height: 350px;
-    border: 1px solid white;
+    // border: 1px solid white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
   .title {
     width: 250px;
     text-overflow: ellipsis;
     text-align: center;
     margin-top: 5px;
-    color: white;
+    color: black;
+    font-weight: 500;
   }
 
   title:hover {
